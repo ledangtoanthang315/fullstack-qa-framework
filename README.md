@@ -56,7 +56,7 @@ fullstack-qa-framework/
 
 4. Clone the project
 
-git clone https://github.com/yourusername/fullstack-qa-framework.git
+git clone https://github.com/ledangtoanthang315/fullstack-qa-framework.git
 cd fullstack-qa-framework
 
 5. Web UI Test Flow (CTFLearner)
