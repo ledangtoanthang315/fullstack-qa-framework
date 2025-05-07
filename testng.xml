@@ -1,0 +1,14 @@
+<suite name="FullStack QATests">
+    <test name="Web Test">
+        <parameter name="platform" value="web"/>
+        <classes>
+            <class name="web.tests.WebE2ETest"/>
+        </classes>
+    </test>
+    <test name="Mobile Test">
+        <parameter name="platform" value="mobile"/>
+        <classes>
+            <class name="mobile.tests.MobileE2ETest"/>
+        </classes>
+    </test>
+</suite>
