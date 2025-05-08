@@ -8,8 +8,8 @@ public class CreateChallengePage {
     public CreateChallengePage(WebDriver driver) { this.driver = driver; }
 
     private final By titleField = By.id("title");
-    private final By descriptionField = By.id("description");
-    private final By createButton = By.xpath("//button[contains(text(),'Create')]");
+    private final By descriptionField = By.id("flask-pagedown-description");
+    private final By createButton = By.xpath("//button[contains(text(),'Submit')]");
 
     public void createChallenge(String title, String description) {
         driver.findElement(titleField).sendKeys(title);
