@@ -11,7 +11,7 @@ public class MobileE2ETest extends BaseTest {
     @Test
     public void testPortfolioViewFlow() {
         MobileLoginPage login = new MobileLoginPage(mobileDriver);
-        PortfolioPage portfolio = login.login("test@mail.com", "password123");
+        PortfolioPage portfolio = login.login("teeinc86@mail.com", "123456");
         Assert.assertTrue(portfolio.verifyPortfolioDataDisplayed());
 
         LogoutPage logout = new LogoutPage(mobileDriver);
