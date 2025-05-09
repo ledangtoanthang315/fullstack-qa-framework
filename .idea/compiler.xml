@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="fullstack-qa-framework" />
+        <module name="fullstack-qa-framework-WEB" />
       </profile>
     </annotationProcessing>
   </component>

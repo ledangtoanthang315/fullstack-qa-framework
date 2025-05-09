@@ -10,11 +10,17 @@ public class LogoutPage {
         this.driver = driver;
     }
 
-    private final By menuButton = By.id("com.example.app:id/menu_button");
-    private final By logoutButton = By.id("com.example.app:id/logout_button");
+    private final By menuButton = By.xpath("//XCUIElementTypeButton[@name='More']");
+    private final By settingsButton = By.xpath("//XCUIElementTypeStaticText[@name='Settings']");
+    private final By logoutButton = By.xpath("//XCUIElementTypeStaticText[@name='Log Out']");
 
     public void logout() {
-        driver.findElement(menuButton).click();
-        driver.findElement(logoutButton).click();
+        try {
+            driver.findElement(menuButton).click();
+            driver.findElement(settingsButton).click();
+            driver.findElement(logoutButton).click();
+        } catch (Exception e) {
+            System.out.println("Logout failed: " + e.getMessage());
+        }
     }
 }

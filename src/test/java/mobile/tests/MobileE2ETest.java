@@ -8,13 +8,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MobileE2ETest extends BaseTest {
+
     @Test
     public void testPortfolioViewFlow() {
-        MobileLoginPage login = new MobileLoginPage(mobileDriver);
-        PortfolioPage portfolio = login.login("teeinc86@mail.com", "TradingView!1988");
-        Assert.assertTrue(portfolio.verifyPortfolioDataDisplayed());
+        MobileLoginPage loginPage = new MobileLoginPage(mobileDriver);
+        PortfolioPage portfolioPage = loginPage.login("teeinc86@mail.com", "TradingView!1988");
 
-        LogoutPage logout = new LogoutPage(mobileDriver);
-        logout.logout();
+        Assert.assertTrue(portfolioPage.verifyPortfolioDataDisplayed(),
+                "Portfolio data was not displayed as expected.");
+
+        LogoutPage logoutPage = new LogoutPage(mobileDriver);
+        logoutPage.logout();
     }
 }
